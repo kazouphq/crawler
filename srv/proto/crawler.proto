@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package go.micro.srv.crawler;
+
+service Crawler {
+	rpc Start(StartRequest) returns (StartResponse) {}
+}
+
+message StartRequest {
+	string type = 1;
+	map<string,string> config = 2;
+}
+
+message StartResponse {
+	string status =1;
+}
